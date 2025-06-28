@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+   
+}
+
+nav {
+    background-color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 0.2rem 0.9rem #47acfe;
+}
+
+.nav-content {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #008cff;
+    text-decoration: none;
+    
+    letter-spacing: 0.06rem;
+    transition: color 0.3s;
+    text-shadow: 0 0 3rem #008cff;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    text-shadow: 0 0 3rem #ffffff;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.1rem;
+    background-color: #008cff;
+    transition: width 0.3s;
+        
+}
+
+.nav-links a:hover {
+    color: #008cff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: #008cff;
+    border: none;
+    box-shadow: 0 0 0.6rem ;
+    padding: 0.5rem 1rem;
+    border-radius: 6rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-shadow: 0 0 0.6rem #008cff;
+
+}
+.nav-btn:hover {
+    background-color: #008cff;
+    color: #ffffff;
+    box-shadow: 0 0 0.6rem #008cff;
+}
+
+.nav-btn.primary {
+    background-color: #008cff;
+    color: #ffffff;
+    box-shadow: 0 0 0.6rem #008cff;
+}
+
+.nav-btn.primary:hover {
+    background-color: transparent;
+    color: #008cff;
+    box-shadow: 0 0 0.6rem #008cff;
+}
+
+.search-bar {
+    align-items: flex-start;
+    background-color: transparent;
+    color: #008cff;
+    border-radius: 6rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 0.6rem #008cff;
+    box-shadow: 0 0 0.6rem #008cff;
+    width: 20rem;
+    text-align: left;
+    cursor: text;
+}
