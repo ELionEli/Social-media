@@ -3,10 +3,30 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+  /* Shadow variables */
+  --shadow-blue: 0 0 0.6rem var(--primary-blue);
+  --shadow-blue-hover: 0 0 1rem var(--primary-blue);
+
+  /* Common colors */
+  --primary-blue: #008cff;
+  --primary-blue-hover: #0073d4;
+}
+
 body {
   background-color: #ffffff;
   color: #ffffff;
   margin: 0;
   padding: 0;
   color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

@@ -20,12 +20,12 @@ nav {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #008cff;
+  color: var(--primary-blue);
   text-decoration: none;
 
   letter-spacing: 0.06rem;
   transition: color 0.3s;
-  text-shadow: 0 0 3rem #008cff;
+  text-shadow: 0 0 3rem var(--primary-blue);
 }
 
 .nav-links {
@@ -50,12 +50,12 @@ nav {
   left: 0;
   width: 0;
   height: 0.1rem;
-  background-color: #008cff;
+  background-color: var(--primary-blue);
   transition: width 0.3s;
 }
 
 .nav-links a:hover {
-  color: #008cff;
+  color: var(--primary-blue);
 }
 
 .nav-links a:hover::after {
@@ -69,7 +69,7 @@ nav {
 
 .nav-btn {
   background-color: transparent;
-  color: #008cff;
+  color: var(--primary-blue);
   border: none;
   box-shadow: 0 0 0.6rem;
   padding: 0.5rem 1rem;
@@ -77,37 +77,46 @@ nav {
   cursor: pointer;
   transition: all 0.3s;
   font-weight: bold;
-  text-shadow: 0 0 0.6rem #008cff;
+  text-shadow: var(--shadow-blue);
 }
 .nav-btn:hover {
-  background-color: #008cff;
+  background-color: var(--primary-blue);
   color: #ffffff;
-  box-shadow: 0 0 0.6rem #008cff;
+  box-shadow: var(--shadow-blue);
 }
 
 .nav-btn.primary {
-  background-color: #008cff;
+  background-color: var(--primary-blue);
   color: #ffffff;
-  box-shadow: 0 0 0.6rem #008cff;
+  box-shadow: var(--shadow-blue);
 }
 
 .nav-btn.primary:hover {
   background-color: transparent;
-  color: #008cff;
-  box-shadow: 0 0 0.6rem #008cff;
+  color: var(--primary-blue);
+  box-shadow: var(--shadow-blue);
 }
 
 .search-bar {
-  align-items: flex-start;
-  background-color: transparent;
-  color: #008cff;
+  width: 20rem;
   border-radius: 6rem;
-  border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
-  text-shadow: 0 0 0.6rem #008cff;
-  box-shadow: 0 0 0.6rem #008cff;
-  width: 20rem;
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: none;
+  box-shadow: var(--shadow-blue);
   text-align: left;
   cursor: text;
+  transition: all 0.3s ease;
+}
+
+.search-bar::placeholder {
+  color: var(--primary-blue);
+  opacity: 0.5;
+}
+
+.search-bar:focus {
+  outline: 2px solid var(--primary-blue);
+  box-shadow: var(--shadow-blue-hover);
 }
