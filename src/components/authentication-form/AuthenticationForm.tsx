@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./AuthenticationForm.css";
+import { Input } from "../input/Input";
 
 interface AuthenticationFormProps {
   mode: "signin" | "signup";
@@ -39,63 +40,46 @@ export const AuthenticationForm = ({ mode }: AuthenticationFormProps) => {
         <h2>{mode === "signin" ? "Sign In" : "Sign Up"}</h2>
         <form onSubmit={handleSubmit} className="auth-form">
           {mode === "signup" && (
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="input"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                placeholder="Enter your full name"
-              />
-            </div>
+            <Input
+              id="name"
+              label="Full Name"
+              placeholder="Enter your full name"
+              handleInputChange={handleInputChange}
+              required={true}
+              value={formData.name}
+            />
           )}
 
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="input"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-              placeholder="Enter your email"
-            />
-          </div>
+          <Input
+            id="email"
+            label="Email"
+            placeholder="Enter your email"
+            handleInputChange={handleInputChange}
+            type="email"
+            required={true}
+            value={formData.email}
+          />
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className="input"
-              value={formData.password}
-              onChange={handleInputChange}
-              required
-              placeholder="Enter your password"
-            />
-          </div>
+          <Input
+            id="password"
+            label="Password"
+            placeholder="Enter your password"
+            handleInputChange={handleInputChange}
+            type="password"
+            required={true}
+            value={formData.password}
+          />
 
           {mode === "signup" && (
-            <div className="form-group">
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                className="input"
-                value={formData.confirmPassword}
-                onChange={handleInputChange}
-                required
-                placeholder="Confirm your password"
-              />
-            </div>
+            <Input
+              id="confirmPassword"
+              label="Confirm Password"
+              placeholder="Confirm your password"
+              handleInputChange={handleInputChange}
+              type="password"
+              required={true}
+              value={formData.confirmPassword}
+            />
           )}
 
           <button type="submit" className="auth-button">
