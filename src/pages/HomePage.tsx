@@ -11,7 +11,8 @@ export const HomePage: FC<IHomePageProps> = () => {
         alignItems: "center",
         height: "80vh",
         fontSize: "24px",
-        color: "#333",
+        color: "var(--primary-blue)",
+        textShadow: "0 0 6rem var(--primary-blue)"
       }}
     >
       <h1>Welcome to Social Media</h1>
