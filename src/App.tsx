@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { HomePage } from "./pages/HomePage";
 import { AuthenticationPage } from "./pages/AuthenticationPage";
 import { NotFoundPage } from "./pages/page-not-found/NotFoundPage";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      <footer></footer>
+      <Footer />
     </Router>
   );
 }
